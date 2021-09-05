@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<main class="m-0 p-3">
+    <h1>Visitor</h1>
+    <!--Datatable-->
+    <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm">
+
+            <div class="dateSelect">
+              <div class="mr-2">
+                <button type="button" class="btn btn-outline-primary " (click)="displayTable(1)">Today</button>
+              </div>
+              <div class="mr-2">
+                <button type="button" class="btn btn-outline-primary " >Yesterday</button>
+              </div>
+              <div class="mr-2">
+                <button type="button" class="btn btn-outline-primary ">Last 7 days</button>
+              </div>
+              <div class="mr-3">
+                <button type="button" class="btn btn-outline-primary ">Last 30 days</button>
+              </div>
+              <div class="mx-2 p-2 row border border-success rounded dateSelect" >
+                <div class="mx-2">
+                    From
+                    <input type="date" class="form-control" id="input-5" placeholder="11/11/2019" />
+                </div>
+                <div class="mx-2">
+                    To
+                    <input type="date" class="form-control" id="input-5" placeholder="11/11/2019" />
+                </div>
+                <div class="m-2">
+                    <button type="button" class="btn btn-outline-success ">Select Date</button>
+                  </div>
+              </div>
+            </div>
+      
+
+
+        <hr>
+
+        <table id="example" class="table table-striped table-bordered border" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Vistior Type</th>
+                    <th>Check In </th>
+                    <th>Check out </th>
+                    <th>Vehicle</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of visitors">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.address.street }}, {{ user.address.city }}</td>
+                </tr>
+                
+            </tbody>
+            <!-- <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </tfoot> -->
+        </table>
+
+
+    </div>
+    <!--/Datatable-->
+
+</main>

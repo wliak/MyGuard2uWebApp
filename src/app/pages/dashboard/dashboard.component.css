@@ -1,0 +1,53 @@
+
+.subtitle{
+     font-size: 20px;
+}
+
+.card-single {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 2rem 0.8rem;
+    margin: 0;
+    border-radius: 2px;
+    min-width: 245px;
+}
+.card-icon {
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    line-height:50px;
+    /* font-size: 20px; */
+    margin-left: 0.3rem;
+    padding: 0;
+    align-self: center!important;
+    border-radius: 50%!important;
+}
+
+
+.card-single .card-text {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    /* width: 154px; */
+  }
+
+
+/* Rules for sizing the icon. */
+.material-icons {
+    vertical-align: middle;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 30px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
